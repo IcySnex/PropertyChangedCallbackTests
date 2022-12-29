@@ -1,0 +1,21 @@
+﻿<Application
+    x:Class="PropertyChangedCallbackTests.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:PropertyChangedCallbackTests"
+    xmlns:views="clr-namespace:PropertyChangedCallbackTests.Views"
+    xmlns:vms="clr-namespace:PropertyChangedCallbackTests.ViewModels"
+    Startup="OnApplicationStartup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Controls/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--  DATAMODELS  -->
+            <DataTemplate DataType="{x:Type vms:DefaultViewModel}">
+                <views:DefaultView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

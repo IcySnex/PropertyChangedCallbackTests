@@ -1,0 +1,14 @@
+.vs/
+packages/
+
+*.suo
+*.user
+_ReSharper.*
+
+PropertyChangedCallbackTests/bin/
+PropertyChangedCallbackTests/obj/
+PropertyChangedCallbackTests/Properties/
+
+PropertyChangedCallbackTests-WinUi/bin/
+PropertyChangedCallbackTests-WinUi/obj/
+PropertyChangedCallbackTests-WinUi/Properties/

@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="PropertyChangedCallbackTests.Views.DefaultView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PropertyChangedCallbackTests.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:PropertyChangedCallbackTests.Controls"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="Gray"
+    mc:Ignorable="d">
+
+    <StackPanel VerticalAlignment="Center">
+        <Viewbox Height="90">
+            <ui:CustomControl
+                Content="This is a CustomControl"
+                IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                VerificationRequestedCommand="{Binding VerificationCommand}" />
+        </Viewbox>
+
+        <TextBlock
+            Margin="0,24,0,0"
+            HorizontalAlignment="Center"
+            FontSize="16">
+            <Run Text="The current state is:" />
+            <Run Text="{Binding IsChecked}" />
+        </TextBlock>
+
+        <Button
+            Margin="0,12,0,0"
+            Padding="12"
+            HorizontalAlignment="Center"
+            Content="Command" />
+    </StackPanel>
+</UserControl>
